@@ -3,10 +3,19 @@ variable "name" {
   description = "name of the hosted zone"
 }
 
-variable "comment" {
-  default     = ""
+variable "description" {
   type        = "string"
-  description = "comment for the hosted zone"
+  description = "Description of the hosted zone"
+}
+
+variable "product_domain" {
+  type        = "string"
+  description = "Abbreviation of the product domain this Route 53 zone belongs to"
+}
+
+variable "environment" {
+  type        = "string"
+  description = "Environment this Route 53 zone belongs to"
 }
 
 variable "main_vpc" {

@@ -1,9 +1,15 @@
 resource "aws_route53_zone" "main" {
   name          = "${var.name}"
   vpc_id        = "${var.main_vpc}"
-  tags          = "${var.tags}"
-  comment       = "${var.comment}"
+  comment       = "${var.description}"
   force_destroy = "${var.force_destroy}"
+
+  tags = {
+    "Name"          = "${var.name}"
+    "ProductDomain" = "${var.product_domain}"
+    "Environment"   = "${var.environment}"
+    "Description"   = "${var.description}"
+  }
 }
 
 resource "aws_route53_zone_association" "secondary" {
