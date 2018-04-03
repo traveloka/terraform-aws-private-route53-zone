@@ -1,11 +1,11 @@
 module "test" {
   source = "../.."
 
-  name            = "example.domain.private"
-  main_vpc        = "vpc-12345678"
-  associated_vpcs = ["vpc-fedbca09", "vpc-abcdef12"]
+  name           = "fpr.traveloka.com"
+  main_vpc       = "vpc-12345678"
+  secondary_vpcs = ["vpc-fedbca09", "vpc-abcdef12"]
 
-  description    = "Example Private Histed Zone"
+  description    = "Flight Product route53 hosted zone"
   environment    = "production"
-  product_domain = "xmp"
+  product_domain = "fpr"
 }

@@ -13,7 +13,7 @@ resource "aws_route53_zone" "main" {
 }
 
 resource "aws_route53_zone_association" "secondary" {
-  count   = "${length(var.associated_vpcs)}"
+  count   = "${length(var.secondary_vpcs)}"
   zone_id = "${aws_route53_zone.main.zone_id}"
-  vpc_id  = "${var.associated_vpcs[count.index]}"
+  vpc_id  = "${var.secondary_vpcs[count.index]}"
 }
