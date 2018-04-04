@@ -30,7 +30,7 @@ variable "secondary_vpcs" {
 }
 
 variable "force_destroy" {
-  default     = false
   type        = "string"
+  default     = false
   description = "Whether to destroy all records inside if the hosted zone is deleted"
 }
