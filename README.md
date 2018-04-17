@@ -8,7 +8,7 @@ See [Simple Example](examples/simple/main.tf)
 ## Conventions
 - name will be used as the hosted zone's name
 - description will be used as the hosted zone's comment
-- the hosted zone will have `Name`, `ProductDomain`, `Environment`, and `Description` Tag
+- the hosted zone will have `Name`, `ProductDomain`, `Environment`, `Description`, and `ManagedBy` Tag
 
 ## Authors
   - [Abi](https://github.com/abihf)
