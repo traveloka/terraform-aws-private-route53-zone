@@ -3,11 +3,6 @@ variable "name" {
   description = "Name of the hosted zone"
 }
 
-variable "description" {
-  type        = "string"
-  description = "Description of the hosted zone"
-}
-
 variable "product_domain" {
   type        = "string"
   description = "Abbreviation of the product domain this Route 53 zone belongs to"
