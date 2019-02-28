@@ -4,7 +4,9 @@ locals {
 
 resource "aws_route53_zone" "main" {
   name          = "${var.name}"
-  vpc_id        = "${var.main_vpc}"
+  vpc {
+    vpc_id = "${var.main_vpc}"
+  }
   comment       = "${local.description}"
   force_destroy = "${var.force_destroy}"
 
