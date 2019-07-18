@@ -1,33 +1,10 @@
-## v0.2.0 (Feb 28, 2019)
-
-NOTES:
-* Any Notes regarding your submitted PR, like breaking changes or else.
-
-FEATURES:
-
-* **New Source:** `aws_000_0000` ([#references_to_issue](./))
-
-ENHANCEMENTS:
-
-* feature: Add support for new version of AWS API
+## v0.2.0 (Apr 17, 2018)
 
 BUG FIXES:
 
-* Prevent error from evil bugs
+* Fix tagging to follow convention
 
-## v0.1.0 (Jan 1, 2019)
+## v0.1.0 (Apr 5, 2018)
 
 NOTES:
-* Any Notes regarding your submitted PR, like breaking changes or else.
-
-FEATURES:
-
-* **New Source:** `aws_000_0000` ([#references_to_issue](./))
-
-ENHANCEMENTS:
-
-* feature: Add support for new version of AWS API
-
-BUG FIXES:
-
-* Prevent error from evil bugs
+* Initial implementation of this module.
