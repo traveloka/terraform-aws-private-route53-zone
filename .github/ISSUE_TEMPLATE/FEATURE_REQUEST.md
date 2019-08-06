@@ -2,7 +2,7 @@
 name: Feature Request
 about: Give suggestion(s) of what needs to be done to improve this module
 labels: enhancement
-title: "[ENHANCEMENT] <add_your_clear_and_concise_title_here>"
+title: "<add_your_clear_and_concise_title_here>"
 ---
 
 

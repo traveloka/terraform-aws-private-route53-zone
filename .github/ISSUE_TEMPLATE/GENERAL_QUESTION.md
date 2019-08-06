@@ -2,7 +2,7 @@
 name: General Question
 about: Unsure about something? Have anything to discuss?
 labels: question
-title: "[QUESTION] <add_your_clear_and_concise_title_here>"
+title: "<add_your_clear_and_concise_title_here>"
 ---
 
 
