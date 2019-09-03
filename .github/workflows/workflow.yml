@@ -1,0 +1,23 @@
+name: Automated Actions
+
+on: [issues, pull_request]
+
+jobs:
+  add-to-project:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Adding the issue to a project
+        if: github.event_name == 'issues' && github.event.action == 'opened'
+        uses: alex-page/github-project-automation-plus@v0.0.3
+        with:
+          project: terraform-github-actions-research
+          column: To do
+          repo-token: ${{ secrets.GH_PAT }}
+
+      - name: Adding the pull request to a project
+        if: github.event_name == 'pull_request' && (github.event.action == 'assigned' || github.event.action == 'opened')
+        uses: alex-page/github-project-automation-plus@v0.0.3
+        with:
+          project: terraform-github-actions-research
+          column: To do
+          repo-token: ${{ secrets.GH_PAT }}
