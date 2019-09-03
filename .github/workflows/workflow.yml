@@ -10,7 +10,7 @@ jobs:
         if: github.event_name == 'issues' && github.event.action == 'opened'
         uses: alex-page/github-project-automation-plus@v0.0.3
         with:
-          project: terraform-github-actions-research
+          project: Curated Terraform Modules
           column: To do
           repo-token: ${{ secrets.GH_PAT }}
 
@@ -18,6 +18,6 @@ jobs:
         if: github.event_name == 'pull_request' && (github.event.action == 'assigned' || github.event.action == 'opened')
         uses: alex-page/github-project-automation-plus@v0.0.3
         with:
-          project: terraform-github-actions-research
-          column: To do
+          project: Curated Terraform Modules
+          column: In progress
           repo-token: ${{ secrets.GH_PAT }}
