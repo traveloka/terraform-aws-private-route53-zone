@@ -44,7 +44,7 @@ A terraform module to provision a Private Route53 Hosted Zone
 | environment | Environment this Route 53 zone belongs to. | `string` | n/a | yes |
 | main_vpc | Main VPC ID that will be associated with this hosted zone. | `string` | n/a | yes |
 | secondary_vpcs | List of VPCs that will also be associated with this zone. | `string` | n/a | yes |
-| force_destroy | Whether to destroy all records inside if the hosted zone is deleted. | `string` | `false` | yes |
+| force_destroy | Whether to destroy all records inside if the hosted zone is deleted. | `string` | `false` | no |
 
 ## Outputs
 
