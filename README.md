@@ -1,62 +1,73 @@
-# terraform-aws-private-route53-zone
+# terraform-aws-elasticache-memcached
 
-[![Terraform Version](https://img.shields.io/badge/Terraform%20Version->=0.11.14,_<0.12.0-blue.svg)](https://releases.hashicorp.com/terraform/)
-[![Release](https://img.shields.io/github/release/traveloka/terraform-aws-private-route53-zone.svg)](https://github.com/traveloka/terraform-aws-private-route53-zone/releases)
-[![Last Commit](https://img.shields.io/github/last-commit/traveloka/terraform-aws-private-route53-zone.svg)](https://github.com/traveloka/terraform-aws-private-route53-zone/commits/master)
-[![Issues](https://img.shields.io/github/issues/traveloka/terraform-aws-private-route53-zone.svg)](https://github.com/traveloka/terraform-aws-private-route53-zone/issues)
-[![Pull Requests](https://img.shields.io/github/issues-pr/traveloka/terraform-aws-private-route53-zone.svg)](https://github.com/traveloka/terraform-aws-private-route53-zone/pulls)
-[![License](https://img.shields.io/github/license/traveloka/terraform-aws-private-route53-zone.svg)](https://github.com/traveloka/terraform-aws-private-route53-zone/blob/master/LICENSE)
+[![Release](https://img.shields.io/github/release/traveloka/terraform-aws-elasticache-memcached.svg)](https://github.com/traveloka/terraform-aws-elasticache-memcached/releases)
+[![Last Commit](https://img.shields.io/github/last-commit/traveloka/terraform-aws-elasticache-memcached.svg)](https://github.com/traveloka/terraform-aws-elasticache-memcached/commits/master)
 ![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.png?v=103)
+
+## Description
+
+Terraform module to create a private Route53 hosted zone
 
 ## Table of Content
 
+- [Description](#Description)
 - [Prerequisites](#Prerequisites)
-- [Quick Start](#Quick-Start)
 - [Dependencies](#Dependencies)
+- [Terraform Versions](#Terraform%20Versions)
+- [Terraform Providers](#Terraform%20Providers)
+- [Getting Started](#Getting_Started)
+- [Inputs](#Inputs)
+- [Outputs](#Outputs)
 - [Contributing](#Contributing)
-- [Contributor](#Contributor)
 - [License](#License)
 - [Acknowledgments](#Acknowledgments)
 
 ## Prerequisites
 
-- [Terraform](https://releases.hashicorp.com/terraform/). This module currently tested on `0.11.14`
+In order to provision this module, it is require some information from an existing resources as input parameter, those resources are:
 
-## Quick Start
-A terraform module to provision a Private Route53 Hosted Zone
+- AWS VPC, input variable that require the information from this resource are, `main_vpc`, and `secondary_vpcs` 
 
-### Examples
+## Dependencies
 
-* [Simple Example](https://github.com/traveloka/terraform-aws-private-route53-zone/tree/master/examples/simple)
+Doesn't have any dependencies to any other Terraform module
 
-## Providers
+## Terraform Versions
+
+Created and tested using Terraform version `0.11.14`
+
+## Terraform Providers
 
 | Name | Version |
-|------|---------|
-| aws | n/a |
+| ---- | ------- |
+| aws  | ~> 2.49 |
 
+## Getting Started
+
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:-----:|
-| name | Name of the hosted zone. | `string` | n/a | yes |
-| product_domain | Abbreviation of the product domain this Route 53 zone belongs to. | `string` | n/a | yes |
-| environment | Environment this Route 53 zone belongs to. | `string` | n/a | yes |
-| main_vpc | Main VPC ID that will be associated with this hosted zone. | `string` | n/a | yes |
-| secondary_vpcs | List of VPCs that will also be associated with this zone. | `string` | n/a | yes |
-| force_destroy | Whether to destroy all records inside if the hosted zone is deleted. | `string` | `false` | no |
+| environment | Environment this Route 53 zone belongs to | `string` | n/a | yes |
+| force\_destroy | Whether to destroy all records inside if the hosted zone is deleted | `string` | `false` | no |
+| main\_vpc | Main VPC ID that will be associated with this hosted zone | `string` | n/a | yes |
+| name | Name of the hosted zone | `string` | n/a | yes |
+| product\_domain | Abbreviation of the product domain this Route 53 zone belongs to | `string` | n/a | yes |
+| secondary\_vpcs | List of VPCs that will also be associated with this zone | `list` | `[]` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| zone_id | The hosted zone id. |
+| zone\_id | The hosted zone id |
+
+<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md)
+This module accepting or open for any contributions from anyone, please see the [CONTRIBUTING.md](https://github.com/traveloka/terraform-aws-elasticache-memcached/blob/master/CONTRIBUTING.md) for more detail about how to contribute to this module.
 
 ## License
 
-Apache 2 Licensed. See LICENSE for full details.
-
+This module is under Apache License 2.0 - see the [LICENSE](https://github.com/traveloka/terraform-aws-elasticache-memcached/blob/master/LICENSE) file for details.
