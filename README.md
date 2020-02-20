@@ -1,7 +1,7 @@
-# terraform-aws-elasticache-memcached
+# terraform-aws-private-route53-zone
 
-[![Release](https://img.shields.io/github/release/traveloka/terraform-aws-elasticache-memcached.svg)](https://github.com/traveloka/terraform-aws-elasticache-memcached/releases)
-[![Last Commit](https://img.shields.io/github/last-commit/traveloka/terraform-aws-elasticache-memcached.svg)](https://github.com/traveloka/terraform-aws-elasticache-memcached/commits/master)
+[![Release](https://img.shields.io/github/release/traveloka/terraform-aws-private-route53-zone.svg)](https://github.com/traveloka/terraform-aws-private-route53-zone/releases)
+[![Last Commit](https://img.shields.io/github/last-commit/traveloka/terraform-aws-private-route53-zone.svg)](https://github.com/traveloka/terraform-aws-private-route53-zone/commits/master)
 ![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.png?v=103)
 
 ## Description
@@ -66,8 +66,8 @@ Created and tested using Terraform version `0.11.14`
 
 ## Contributing
 
-This module accepting or open for any contributions from anyone, please see the [CONTRIBUTING.md](https://github.com/traveloka/terraform-aws-elasticache-memcached/blob/master/CONTRIBUTING.md) for more detail about how to contribute to this module.
+This module accepting or open for any contributions from anyone, please see the [CONTRIBUTING.md](https://github.com/traveloka/terraform-aws-private-route53-zone/blob/master/CONTRIBUTING.md) for more detail about how to contribute to this module.
 
 ## License
 
-This module is under Apache License 2.0 - see the [LICENSE](https://github.com/traveloka/terraform-aws-elasticache-memcached/blob/master/LICENSE) file for details.
+This module is under Apache License 2.0 - see the [LICENSE](https://github.com/traveloka/terraform-aws-private-route53-zone/blob/master/LICENSE) file for details.
