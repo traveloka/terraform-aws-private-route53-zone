@@ -5,9 +5,11 @@ locals {
 
 resource "aws_route53_zone" "main" {
   name = var.name
-
-  vpc {
-    vpc_id = var.main_vpc
+  dynamic "vpc" {
+    for_each = var.vpc_ids
+    content {
+      vpc_id = vpc.value
+    }
   }
 
   comment       = local.description
@@ -20,10 +22,4 @@ resource "aws_route53_zone" "main" {
     "Description"   = local.description
     "ManagedBy"     = local.managed_by
   }
-}
-
-resource "aws_route53_zone_association" "secondary" {
-  count   = length(var.secondary_vpcs)
-  zone_id = aws_route53_zone.main.zone_id
-  vpc_id  = var.secondary_vpcs[count.index]
 }
