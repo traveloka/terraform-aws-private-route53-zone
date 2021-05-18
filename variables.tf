@@ -14,7 +14,7 @@ variable "environment" {
 }
 
 variable "vpc_ids" {
-  type        = list(string)
+  type        = list(map(string))
   description = "List of VPC ID's that will be associated with this hosted zone"
 }
 
@@ -22,4 +22,9 @@ variable "force_destroy" {
   type        = bool
   default     = false
   description = "Whether to destroy all records inside if the hosted zone is deleted"
+}
+
+variable "default_vpc_region" {
+  type        = string
+  description = "Default region of lists of the associated VPC's."
 }
