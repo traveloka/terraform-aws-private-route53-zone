@@ -13,9 +13,15 @@ variable "environment" {
   description = "Environment this Route 53 zone belongs to"
 }
 
-variable "vpc_ids" {
+variable "main_vpc" {
+  type        = string
+  description = "Main VPC ID that will be associated with this hosted zone"
+}
+
+variable "additional_vpc_ids" {
   type        = list(map(string))
-  description = "List of VPC ID's that will be associated with this hosted zone"
+  description = "List of additional VPC ID's that will be associated with this hosted zone"
+  default     = []
 }
 
 variable "force_destroy" {
