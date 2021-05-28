@@ -18,14 +18,19 @@ variable "main_vpc" {
   description = "Main VPC ID that will be associated with this hosted zone"
 }
 
-variable "secondary_vpcs" {
-  type        = list
+variable "additional_vpc_ids" {
+  type        = list(map(string))
+  description = "List of additional VPC ID's that will be associated with this hosted zone"
   default     = []
-  description = "List of VPCs that will also be associated with this zone"
 }
 
 variable "force_destroy" {
-  type        = string
+  type        = bool
   default     = false
   description = "Whether to destroy all records inside if the hosted zone is deleted"
+}
+
+variable "default_vpc_region" {
+  type        = string
+  description = "Default region of lists of the associated VPC's."
 }

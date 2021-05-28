@@ -1,10 +1,9 @@
 module "test" {
   source = "../.."
 
-  name           = "fpr.traveloka.com"
-  main_vpc       = "vpc-12345678"
-  secondary_vpcs = ["vpc-fedbca09", "vpc-abcdef12"]
-
-  environment    = "production"
-  product_domain = "fpr"
+  name               = "fpr.traveloka.com"
+  default_vpc_region = "ap-southeast-1"
+  main_vpc           = "vpc-12345678" # main vpc associated with own services from it's own account
+  environment        = "production"
+  product_domain     = "fpr"
 }
